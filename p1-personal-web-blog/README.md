@@ -1,9 +1,17 @@
-# personal-web-blog
+# Personal Blog Website
 
-Udacity Nano-degree Program Project- personal web blog
+Udacity Front-End Web Developer Nanodegree - CSS, Website Layout, Website Components (Project-1): Personal Blog Website
 
-I created a persoanl blog web app. I'm going to use html5, css3- grid-layout, flexbox, media-queries .
+Project Rubric: [rubric](https://review.udacity.com/#!/rubrics/2667/view)
 
-### [Live Site](https://manpreet-singh10196.github.io/Personal-web-blog/)
+## Start
 
-### https://manpreet-singh10196.github.io/Personal-web-blog/
+The project can be run by opening the index.html file in the browser.
+
+## Images
+
+Images are from kota famous places [https://www.wikipedia.org](https://www.wikipedia.org).
+
+## Content
+
+Contents are from [https://www.wikipedia.org](https://www.wikipedia.org).

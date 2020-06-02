@@ -1,9 +1,14 @@
-# personal-web-blog
+# Udacity Nano-degree Program Project
 
-Udacity Nano-degree Program Project
+##Projects:
+- P1 - Personal Web Blog
+- P2 - Landing Page
 
-I created a persoanl blog web app. I'm going to use html5, css3- grid-layout, flexbox, media-queries .
+##Courses
+- Html5
+- CSS ,Website Layout, Website
+- JavaScript & The Dom
 
-### [Live Site](https://manpreet-singh10196.github.io/Personal-web-blog/)
-
-### https://manpreet-singh10196.github.io/Personal-web-blog/
+/*
+        color:#02b3e4;
+*/
