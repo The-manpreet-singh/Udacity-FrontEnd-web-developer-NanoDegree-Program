@@ -1,0 +1,229 @@
+@import 'nav.css';
+@import 'layout.css';
+@import 'footer.css';
+
+
+#grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(30px, auto);
+    gap: 6px;
+    grid-template-areas:
+    "nav nav"
+    "top-post top-post"
+    "newsletter newsletter"
+    "post-1 post-2"
+    "post-3 post-4"
+    "post-5 post-4"
+    "ft ft";
+  }
+  
+  @media (min-width: 600px) {
+    #grid-container {
+      height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 60px auto auto auto 30px;
+      gap: 6px;
+      grid-template-areas:
+      "nav nav nav nav"
+      "top-post top-post post-1 post-1"
+      "top-post top-post post-2 post-2"
+      "post-3 post-5 post-5 post-4"
+      "ft ft ft ft";
+    }
+  }
+  
+  /* content */
+  
+  #top-post {
+    grid-area: top-post;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/sagar.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    color: #fffaf0;
+  }
+  
+  .post {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fffaf0;
+    min-height: 160px;
+  }
+  
+  #post-1 {
+    grid-area: post-1;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/jag-mandir.jpg");
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #post-2 {
+    grid-area: post-2;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/mall.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #post-3 {
+    grid-area: post-3;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images//chambel.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #post-4 {
+    grid-area: post-4;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/deshara.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #post-5 {
+    grid-area: post-5;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/park.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  
+  /* tile styling */
+  
+  .text-gradient {
+    background-color: rgba(0, 0, 0, 0.5);
+    min-width: 60%;
+    max-width: 500px;
+    padding: 10px 20px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 2px;
+  }
+  
+  .link {
+    outline: none;
+    text-decoration: none;
+    color: #fffaf0;
+  }
+  
+  .link:visited {
+    color: #fffaf0;
+  }
+  
+  .link:hover {
+    color: #00a6ff
+;
+  }
+  
+  .post-info {
+    text-align: center;
+  }
+  
+  @media (min-width: 600px) and (max-width: 1200px) {
+    .post h4 {
+      font-size: 1.5em;
+    }
+  
+    .post .post-info {
+      font-size: 0.8em;
+    }
+  
+    .text-gradient {
+      padding: 5px 15px;
+      margin: 5px;
+    }
+  }
+  
+  /* newsletter */
+  
+  #newsletter {
+    grid-area: newsletter;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .newsletter-container {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 5px;
+  }
+  
+  .newsletter-element {
+    width: 30%;
+  }
+  
+  input[type=text], input[type=submit] {
+    text-align: center;
+    width: 100%;
+    padding: 12px;
+    margin: 8px 5px;
+    border: 1px solid #fffaf0;
+    box-sizing: border-box;
+  }
+  
+  input[type=submit] {
+    font-size: 1.1em;
+    letter-spacing: 0.1em;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: inline-block;
+    background-color: #e54b4b;
+    border: 2px solid #e54b4b;
+    color: #fffaf0;
+    transition: all 0.3s;
+    border: none;
+  }
+  
+  input[type=submit]:hover {
+    background-color: transparent;
+    border: 2px solid #e54b4b;
+    color: #e54b4b;
+    transform: scale(0.9);
+  }
+  
+  @media (min-width: 600px) and (max-width: 780px) {
+    .newsletter-container {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 5px;
+    }
+  
+    .newsletter-element {
+      width: 40%;
+    }
+  
+    input[type=submit] {
+      font-size: 0.9em;
+    }
+  }
+  
