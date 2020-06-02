@@ -125,7 +125,7 @@ body {
   /* Footer Styles */
   .page_footer {
     background: #000;
-    padding: 3em;
+    padding: 2em;
     color: #fff;
   }
   
@@ -137,7 +137,7 @@ body {
   /* Landing Container Styles */
   .landing_container {
     padding: 1em;
-    text-align: left;
+    text-align: center;
   }
   
   @media only screen and (min-width: 35em) {
@@ -150,7 +150,6 @@ body {
   section:nth-of-type(even) .landing_container {
     margin-right: 0;
     margin-left: auto;
-    text-align: right;
   }
   
   /* Background Circles */
