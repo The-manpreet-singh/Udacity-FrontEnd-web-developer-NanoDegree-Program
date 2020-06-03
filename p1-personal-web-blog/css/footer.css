@@ -1,21 +1,23 @@
 footer {
     grid-area: ft;
+    display: flex;
+    flex-direction: column;
     height: 30px;
     color: #222;
+    padding-top: 5px;
     padding-bottom: 10px;
     text-align: center;
   }
-  
-  .iconify {
-    font-size: 20px;
-    color: #00a6ff
-;
-    margin-left:5px;
+  footer section {
+    padding-top: 10px;
+  }
+ .link-img {
+  opacity: 0.7;
+  width: 30px;
+  height: 30px;
+  margin: auto 10px;
 }
-.iconify:hover {
-    font-size: 20px;
-    background-color: #00a6ff
-;
-    color: black;
-    margin-left:5px;
+
+.link-img:hover {
+  opacity: 0.4;
 }
