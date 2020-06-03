@@ -1,12 +1,11 @@
-/* Global Variables */
 // Personal API Key for OpenWeatherMap API
-const API_KEY = '&appid=104ec94c9efb96e5545065b88c1f59c1&units=imperial';
-const baseURL = 'https://api.openweathermap.org/data/2.5/weather?zip=';
+const API_KEY = '&APPID=e23122c5062eb361eb2aa6ee3762e1db&units=imperial';
+const baseURL = 'https://api.openweathermap.org/data/2.5/weather?q=';
 
 // Convert date
 function convertDate(unixtimestamp) {
   // Months array
-  var months_arr = [
+  var months_array = [
     'Jan',
     'Feb',
     'Mar',
@@ -28,7 +27,7 @@ function convertDate(unixtimestamp) {
   var year = date.getFullYear();
 
   // Month
-  var month = months_arr[date.getMonth()];
+  var month = months_array[date.getMonth()];
 
   // Day
   var day = date.getDate();
