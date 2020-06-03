@@ -21,7 +21,7 @@ const cors = require('cors');
 app.use(cors());
 
 // Initialize the main project folder
-app.use(express.static('weather-app-client'));
+app.use(express.static('website'));
 
 // Setup Server
 const port = 8000;

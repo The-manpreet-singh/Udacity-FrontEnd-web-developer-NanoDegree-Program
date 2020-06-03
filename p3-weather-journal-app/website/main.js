@@ -32,8 +32,8 @@ function convertDate(unixtimestamp) {
   // Day
   var day = date.getDate();
 
-  // Display date time in MM-dd-yyyy format
-  var convertedTime = month + '-' + day + '-' + year;
+  // Display date time in MM/dd/yyyy format
+  var convertedTime = month + '/' + day + '/' + year;
 
   return convertedTime;
 }
