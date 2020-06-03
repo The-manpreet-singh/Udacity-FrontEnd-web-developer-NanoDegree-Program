@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Hind+Siliguri|Josefin+Sans:700|Overpass&display=swap');
+
+body {
+  /* background: rgb(63, 94, 251); */
+  background: #99b898;
+  background: radial-gradient(circle, #99b898 0%, #2a363b 100%);
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: minmax(50px, auto);
+  grid-template-areas:
+    'hd'
+    'zip'
+    'fl'
+    'gen'
+    'ent';
+}
+
+#app {
+  background: #eceae0;
+  color: black;
+  grid-gap: 1em;
+  font-size: 20px;
+  font-family: 'Hind Siliguri', sans-serif;
+  border: 6px solid black;
+  border-radius: 5%;
+  line-height: 2.5em;
+}
+
+.holder {
+  margin: 5px auto;
+}
+
+.entry {
+  width: 80%;
+  margin: 20px auto;
+  grid-area: ent;
+  padding: 30px 20px 100px 20px;
+  border: 2px solid black;
+  background-color: #e9c92d;
+}
+
+#entryHolder {
+  color: black;
+}
+
+#date {
+  color: firebrick;
+  font-weight: bold;
+}
+
+#temp {
+  color: firebrick;
+  font-weight: bolder;
+}
+
+#content {
+  color: firebrick;
+  font-weight: bolder;
+}
+
+.headline {
+  grid-area: hd;
+  padding-left: 30px;
+}
+
+.zip {
+  grid-area: zip;
+}
+
+.feel {
+  grid-area: fl;
+}
+
+.generate-button {
+  grid-area: gen;
+}
+
+#generate {
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+.title {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 30px;
+  color: #3b4a6b;
+}
+
+label {
+  display: block;
+  font-size: 27px;
+  color: #221e1d;
+  text-align: center;
+}
+
+input {
+  display: block;
+  height: 60px;
+  width: 320px;
+  background: whitesmoke;
+  color: firebrick;
+  font-size: 20px;
+  font-family: 'Overpass', sans-serif;
+  border: 1px solid black;
+  padding-left: 5px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+button {
+  width: 400px;
+  height: 100px;
+  background: #3b4a6b;
+  color: #2b8039;
+  font-size: 26px;
+  font-family: 'Overpass', sans-serif;
+  border: none;
+  box-shadow: 2px 4px 5px #444;
+}
+
+h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 50px;
+  color: #221e1d;
+}
+
+textarea {
+  background: whitesmoke;
+  color: firebrick;
+  padding-left: 5px;
+  font-size: 20px;
+  font-family: 'Overpass', sans-serif;
+  border: 1px solid black;
+}
+/* Reset style for HTML element on active to have no border*/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
