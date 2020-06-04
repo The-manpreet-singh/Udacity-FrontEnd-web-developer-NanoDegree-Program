@@ -9,9 +9,12 @@ const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
 dotenv.config();
 
+// API_ID='96f6b583';
+// API_KEY='bf2af80160e2af7015461852d8fe97e9';
+
 const textapi = new aylien({
-    application_id: `${process.env.API_ID}`,
-    application_key: `${process.env.API_KEY}`
+    application_id: '96f6b583',
+    application_key: 'bf2af80160e2af7015461852d8fe97e9'
 });
 
 const app = express()
@@ -35,13 +38,11 @@ app.listen(8080, function () {
     console.log('Example app listening on port 8080!')
 })
 
-app.get('/test', function (req, res) {
-    res.send(mockAPIResponse)
-})
+
 
 
 app.post('/testing', async (req, res, next) => {
-    //console.log(req.body);
+    console.log(req.body);
     try {
       var data = textapi.sentiment({
         //'text': 'John is a very good football player!'
@@ -50,6 +51,7 @@ app.post('/testing', async (req, res, next) => {
         if (error === null) {
           console.log(response);
           res.send(response);
+          alert(done);
         }
       });
       //res.send(mockAPIResponse)
@@ -60,3 +62,7 @@ app.post('/testing', async (req, res, next) => {
     //res.send(returnVal);
   })
   
+
+  app.get('/test', function (req, res) {
+    res.send(mockAPIResponse)
+})

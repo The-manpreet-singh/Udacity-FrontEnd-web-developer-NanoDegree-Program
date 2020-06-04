@@ -14,7 +14,11 @@
   "description": "",
   "dependencies": {
     "express": "^4.17.1",
+    "mini-css-extract-plugin": "^0.9.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "terser-webpack-plugin": "^3.0.3",
     "webpack": "^4.35.3",
+    "webpack-bundle-analyzer": "^3.8.0",
     "webpack-cli": "^3.3.5"
   },
   "devDependencies": {
@@ -31,6 +35,7 @@
     "node-sass": "^4.13.0",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
-    "webpack-dev-server": "^3.9.0"
+    "webpack-dev-server": "^3.9.0",
+    "workbox-webpack-plugin": "^5.1.3"
   }
 }

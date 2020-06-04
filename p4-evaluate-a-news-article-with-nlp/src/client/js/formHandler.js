@@ -3,7 +3,7 @@ function handleSubmit(event) {
 
     // check what text was put into the form field
     let formText = document.getElementById('name').value
-    Clinet.checkForName(formText)
+    Client.checkForName(formText)
 
     console.log("::: Form Submitted :::")
 
@@ -13,15 +13,22 @@ function handleSubmit(event) {
     //     document.getElementById('results').innerHTML = res.message
     // })
 
+
+    let data= {
+        theText: formText
+    };
+
+    console.log(data);
+
    fetch('/testing', {
        method:"POST",
-       body: JSON.stringify(reqBody),
+       body: JSON.stringify(data),
        headers: {"Content-Type": "application/json"}
    })
     .then(res => res.json())
     .then(function(res) {
-        console.log(res);
-        document.getElementById('results').innerHTML = res.message
+        document.getElementById('results').innerHTML = res.text;
+        //console.log(res);
     })
 
 }
