@@ -9,7 +9,7 @@
     "build-dev": "webpack-dev-server  --config webpack.dev.js --open"
   },
   "keywords": [],
-  "author": "",
+  "author": "Manpreet Singh",
   "license": "ISC",
   "description": "",
   "dependencies": {
@@ -34,4 +34,3 @@
     "webpack-dev-server": "^3.9.0"
   }
 }
-
