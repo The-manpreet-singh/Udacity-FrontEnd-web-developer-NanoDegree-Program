@@ -13,9 +13,9 @@ body {
   grid-template-areas:
     'hd'
     'zip'
-    'fl'
-    'gen'
-    'ent';
+    'feeling'
+    'add'
+    'entry';
 }
 
 #app {
@@ -40,7 +40,7 @@ body {
 .entry {
   width: 60%;
   margin: 20px auto;
-  grid-area: ent;
+  grid-area: entry;
   padding: 9px 35px 92px 19px;
   box-shadow: 2px 5px 6px 6px rgba(0, 0, 0, 0.3), 9px 11px 11px 0 rgba(0, 0, 0, 0.4);
 }
@@ -59,7 +59,7 @@ body {
   font-weight: bolder;
 }
 
-#content {
+#contentry {
   color: firebrick;
   font-weight: bolder;
 }
@@ -74,14 +74,14 @@ body {
 }
 
 .feel {
-  grid-area: fl;
+  grid-area: feeling;
 }
 
-.generate-button {
-  grid-area: gen;
+.adderate-button {
+  grid-area: add;
 }
 
-#generate {
+#adderate {
   color: whitesmoke;
   cursor: pointer;
 }
@@ -97,7 +97,7 @@ label {
   font-size: 18px;
   font-weight: 600;
   color: #221e1d;
-  text-align: center;
+  text-align: centryer;
 }
 
 input {
@@ -111,7 +111,7 @@ input {
     font-family: 'Overpass', sans-serif;
     border: 1px solid black;
     padding-left: 5px;
-    text-align: center;
+    text-align: centryer;
     margin: 0 auto;
 }
 
@@ -120,6 +120,7 @@ button {
   height: 50px;
   border-radius: 10px;
   background: #3B4873;
+  color: aliceblue;
   font-size: 23px;
   font-family: 'Overpass', sans-serif;
   border: none;
@@ -140,7 +141,7 @@ textarea {
   font-family:sans-serif;
   border: 1px solid black;
 }
-/* Reset style for HTML element on active to have no border*/
+/* Reset style for HTML elementry on active to have no border*/
 input:focus,
 select:focus,
 textarea:focus,
