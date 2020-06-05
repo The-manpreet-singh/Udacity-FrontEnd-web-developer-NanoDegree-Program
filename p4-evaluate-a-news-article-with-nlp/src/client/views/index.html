@@ -23,8 +23,8 @@
 
         <main>
             <section>
-                <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
+                <form class="" onsubmit="return handleSubmit(event)">
+                    <input id="name" type="text" name="input" value="" placeholder="Name">
                     <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
                 </form>
             <section>
@@ -39,7 +39,7 @@
             <p>This is a footer</p>
         </footer>
      
-     <script>
+     <!-- <script>
             // Check that service workers are supported
             if ('serviceWorker' in navigator) {
                 // Use the window load event to keep the page load performant
@@ -47,6 +47,6 @@
                     navigator.serviceWorker.register('/service-worker.js');
                 });
             }
-        </script> 
+        </script>  -->
     </body>
 </html>
