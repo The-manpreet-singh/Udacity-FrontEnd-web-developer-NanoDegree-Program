@@ -23,7 +23,7 @@
 
         <main>
             <section>
-                <form class="" onsubmit="return handleSubmit(event)">
+                <form class="" onsubmit="return client.handleSubmit(event)">
                     <input id="name" type="text" name="input" value="" placeholder="Name">
                     <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
                 </form>
@@ -39,14 +39,18 @@
             <p>This is a footer</p>
         </footer>
      
-     <!-- <script>
+        <script>
             // Check that service workers are supported
             if ('serviceWorker' in navigator) {
-                // Use the window load event to keep the page load performant
                 window.addEventListener('load', () => {
-                    navigator.serviceWorker.register('/service-worker.js');
+                    navigator.serviceWorker.register('/service-worker.js').then(registration =>{
+                        console.log('SW registered successfuly: ', registration);
+                    });
                 });
-            }
-        </script>  -->
+                }else{
+                console.log("Service Working not supported");
+                    }
+        </script>
+        
     </body>
 </html>
