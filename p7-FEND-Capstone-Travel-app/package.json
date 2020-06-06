@@ -1,0 +1,45 @@
+{
+  "name": "p7-fend-capstone-travel-app",
+  "version": "1.0.0",
+  "description": "api fetch app",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "npm run client-prod && npm run server-prod",
+    "server-dev": "nodemon src/server/index.js",
+    "server-prod": "node src/server/index.js",
+    "client-prod": "webpack --config webpack.prod.js",
+    "client-dev": "webpack-dev-server  --config webpack.dev.js --open"
+  },
+  "author": "Manpreet Singh",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "aylien_textapi": "^0.7.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dark-sky": "^1.1.5",
+    "express": "^4.17.1",
+    "ms-convert": "^1.0.1",
+    "request": "^2.88.0",
+    "supertest": "^4.0.2",
+    "valid-url": "^1.0.9",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.10"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.2.0",
+    "dotenv": "^8.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^24.9.0",
+    "node-sass": "^4.13.1",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "webpack-dev-server": "^3.9.0",
+    "workbox-webpack-plugin": "^4.3.1"
+  }
+}
