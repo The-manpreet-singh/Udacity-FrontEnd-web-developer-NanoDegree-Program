@@ -5,8 +5,9 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
-    mode: 'production',
+    mode: 'development',
     devtool: 'source-map',
+    stats: 'verbose',
     entry: './src/client/index.js',
     output: {
         libraryTarget: 'var',
@@ -39,9 +40,9 @@ module.exports = {
             cleanStaleWebpackAssets: true,
             protectWebpackAssets: false
         }),
-        new WorkboxPlugin.GenerateSW({
-            clientsClaim: true,
-            skipWaiting: true
-        }), 
+        // new WorkboxPlugin.GenerateSW({
+        //     clientsClaim: true,
+        //     skipWaiting: true
+        // }), 
     ]
 }
