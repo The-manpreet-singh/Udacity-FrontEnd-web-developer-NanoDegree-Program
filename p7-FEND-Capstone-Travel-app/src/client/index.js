@@ -1,5 +1,5 @@
 import { buttonHandler } from './js/buttonHandler'
-import { formhandler } from './js/formHandler'
+import { formHandler } from './js/formHandler'
 
 // console.log(checkForName);
 
