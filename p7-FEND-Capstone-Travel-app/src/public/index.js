@@ -3,7 +3,11 @@ import './styles/style.scss';
 import 'bootstrap';
 const $ = require("jquery");
 import { getCity, getTripStart, getTripEnd } from './js/countDown';
-import { getGeoLocation, getWeatherForecast, getImageURL, getCountryInfo } from './js/api';
+import {getGeoLocation} from './js/geoNamesApi';
+import {getImageURL} from './js/pixabayApi';
+import {getWeatherForecast} from './js/weatherApi';
+import {getCountryInfo} from './js/restCountriesApi';
+
 import { showModal, displayTrip } from './js/model';
 
 const trip = {};
