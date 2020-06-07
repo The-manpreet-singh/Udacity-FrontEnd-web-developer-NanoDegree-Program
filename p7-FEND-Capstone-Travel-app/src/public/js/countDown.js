@@ -33,7 +33,7 @@ const countdown = (start, end) => {
 
   const daysLeft = Math.ceil(countdown / 86400000);
 
-  console.log(daysLeft);
+  //console.log(daysLeft);
 
   return daysLeft;
 }

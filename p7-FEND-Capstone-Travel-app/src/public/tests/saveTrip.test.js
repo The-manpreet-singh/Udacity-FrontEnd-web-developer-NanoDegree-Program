@@ -1,4 +1,4 @@
-import request from '../__mocks__/saveTripRequest';
+import api from '../mocks/saveTripRequest';
 
 const trip = {
   city: 'Paris',
@@ -7,7 +7,7 @@ const trip = {
 };
 
 const handleSave = async () => {
-  const response = await request(trip);
+  const response = await api(trip);
   return response;
 }
 

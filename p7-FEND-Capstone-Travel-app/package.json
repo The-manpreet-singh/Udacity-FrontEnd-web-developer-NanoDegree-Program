@@ -14,6 +14,7 @@
   "license": "MIT",
   "dependencies": {
     "dotenv": "^8.2.0",
+    "dotenv-webpack": "^1.8.0",
     "mini-css-extract-plugin": "^0.9.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "terser-webpack-plugin": "^3.0.3",

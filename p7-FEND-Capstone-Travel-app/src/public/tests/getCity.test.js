@@ -1,4 +1,4 @@
-import { getCity } from '../js/utils';
+import { getCity } from '../js/countDown';
 
 test('should return Paris', () => {
   beforeEach(() => {

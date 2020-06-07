@@ -2,9 +2,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/style.scss';
 import 'bootstrap';
 const $ = require("jquery");
-import { getCity, getTripStart, getTripEnd } from './js/utils';
-import { getGeoLocation, getWeatherForecast, getImageURL, getCountryInfo } from './js/request';
-import { showModal, displayTrip } from './js/ui';
+import { getCity, getTripStart, getTripEnd } from './js/countDown';
+import { getGeoLocation, getWeatherForecast, getImageURL, getCountryInfo } from './js/api';
+import { showModal, displayTrip } from './js/model';
 
 const trip = {};
 

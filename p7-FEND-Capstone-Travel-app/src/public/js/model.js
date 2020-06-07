@@ -1,4 +1,4 @@
-import { countdown } from './utils';
+import { countdown } from './countDown';
 import 'bootstrap';
 const $ = require("jquery");
 
@@ -109,7 +109,7 @@ const displayTrip = (trip) => {
   </div>`;
 
   section.appendChild(div);
-  document.querySelector('.hero').appendChild(section);
+  document.querySelector('.main').appendChild(section);
 }
 
 export { showModal, displayTrip };
