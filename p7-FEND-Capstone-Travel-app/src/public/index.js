@@ -3,7 +3,7 @@ import './styles/style.scss';
 import 'bootstrap';
 const $ = require("jquery");
 import { getCity, getTripStart, getTripEnd } from './js/countDown';
-import {getGeoLocation} from './js/geoNamesApi';
+import {getGeoCity} from './js/geoNamesApi';
 import {getImageURL} from './js/pixabayApi';
 import {getWeatherForecast} from './js/weatherApi';
 import {getCountryInfo} from './js/restCountriesApi';
@@ -21,13 +21,13 @@ const handleSearch = async (e) => {
   trip.start = getTripStart();
   trip.end = getTripEnd();
 
-  const geoLocation = await getGeoLocation(trip.city);
+  const geocity = await getGeoCity(trip.city);
 
-  trip.latitude = geoLocation.latitude;
-  trip.longitude = geoLocation.longitude;
-  trip.countryCode = geoLocation.countryCode;
+  trip.latitude = geocity.latitude;
+  trip.longitude = geocity.longitude;
+  trip.countryCode = geocity.countryCode;
 
-  trip.weatherForecast = await getWeatherForecast(geoLocation.latitude, geoLocation.longitude, );
+  trip.weatherForecast = await getWeatherForecast(geocity.latitude, geocity.longitude, );
 
   const countryInfo = await getCountryInfo(trip.countryCode);
 

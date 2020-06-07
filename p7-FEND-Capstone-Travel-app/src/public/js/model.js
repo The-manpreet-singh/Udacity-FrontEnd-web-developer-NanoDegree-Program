@@ -42,7 +42,7 @@ const showModal = (trip) => {
 
   document.querySelector('.trip_title').innerHTML = `<img src="${trip.countryFlag}" class="flag"> ${trip.city}, ${trip.country}`;
   
-  // Display location, dates and the duration
+  // Display city, dates and the duration
   document.querySelectorAll('.media_heading')[0].innerText = `${trip.city}, ${trip.country}`;
   
   //

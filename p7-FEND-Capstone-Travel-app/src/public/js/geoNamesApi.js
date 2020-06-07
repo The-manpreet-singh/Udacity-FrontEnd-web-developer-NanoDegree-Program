@@ -1,22 +1,22 @@
 
-const geonamesUrl = 'http://api.geonames.org/';
-const geonamesKey = 'manpreetsingh';
+const url = 'http://api.geonames.org/';
+const username = 'manpreetsingh';
 const geonamesQuery = 'searchJSON?formatted=true&q=';
 
-export default async function getGeoLocation(location) {
-    const endpoint = geonamesUrl + geonamesQuery + location + '&username=' + geonamesKey + '&style=full'; 
+export default async function getGeoCity(city) {
+    const endpoint = url + geonamesQuery + city + '&username=' + username + '&style=full'; 
     try {
       const response = await fetch(endpoint);
       if (response.ok) {
-        const location = {};
+        const city = {};
         const jsonRes = await response.json();
         //console.log(jsonRes);
-        location.latitude = jsonRes.geonames[0].lat;
-        location.longitude = jsonRes.geonames[0].lng;
-        location.countryCode = jsonRes.geonames[0].countryCode;
+        city.latitude = jsonRes.geonames[0].lat;
+        city.longitude = jsonRes.geonames[0].lng;
+        city.countryCode = jsonRes.geonames[0].countryCode;
   
-        //console.log(location);
-        return location;
+        //console.log(city);
+        return city;
       }
     } catch (error) {
       console.log(error);
