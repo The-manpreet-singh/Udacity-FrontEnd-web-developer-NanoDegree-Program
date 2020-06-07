@@ -1,10 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../css/style.scss';
+import './styles/style.scss';
 import 'bootstrap';
 const $ = require("jquery");
-import { getCity, getTripStart, getTripEnd } from './utils'
-import { getGeoLocation, getWeatherForecast, getImageURL, getCountryInfo } from './request';
-import { showModal, displayTrip } from './ui';
+import { getCity, getTripStart, getTripEnd } from './js/utils';
+import { getGeoLocation, getWeatherForecast, getImageURL, getCountryInfo } from './js/request';
+import { showModal, displayTrip } from './js/ui';
 
 const trip = {};
 
@@ -23,7 +23,7 @@ const handleSearch = async (e) => {
   trip.longitude = geoLocation.longitude;
   trip.countryCode = geoLocation.countryCode;
 
-  trip.weatherForecast = await getWeatherForecast(geoLocation.latitude, geoLocation.longitude);
+  trip.weatherForecast = await getWeatherForecast(geoLocation.latitude, geoLocation.longitude, );
 
   const countryInfo = await getCountryInfo(trip.countryCode);
 

@@ -14,32 +14,23 @@ const getTripDate = (date) => {
   return tripDateText;
 }
 
-const getWeatherInfo = (weatherForecast, daysLeft, date) => {
+const getWeatherInfo = (weatherForecast,daysLeft, date) => {
   
   const weather = {
     temperature: 0,
-    summary: '',
-    forecastTemp: 0,
-    forecastSummary: ''
+    summary: ''
   };
-
-  weather.temperature = weatherForecast.currently.temperature;
-  weather.summary = weatherForecast.currently.summary;
+  //  var startDate = new Date(date);
+  //  var todaydate = new Date();
   
-  date = Date.parse(date);
-  /**
-    * Daily forecast returns forecasts for 8 days.
-    * Go through the array to match the correct day
-    */
-  for (let i = 0; i < weatherForecast.daily.data.length; i++) {
-    if (date >= weatherForecast.daily.data[i].time) {
-      weather.forecastTemp = weatherForecast.daily.data[i].temperatureHigh;
-      weather.forecastSummary = weatherForecast.daily.data[i].summary;
-      break;
-    }
-  }
+  //  startDate = startDate.getDate();
+  //  todaydate = todaydate.getDate();
+
+   weather.temperature = weatherForecast.data[daysLeft].temp;
+   weather.summary = weatherForecast.data[daysLeft].weather.description;
   return weather;
 }
+
 
 const showModal = (trip) => {
   
@@ -71,16 +62,10 @@ const showModal = (trip) => {
   document.querySelector('.trip_countdown').innerText = `Your trip to ${trip.city} is ${daysLeft} days away`;
 
   // Display weather info
-  const weather = getWeatherInfo(trip.weatherForecast, daysLeft, tripStart);
-  if (daysLeft < 7) {
+  const weather = getWeatherInfo(trip.weatherForecast,daysLeft, tripStart);
     document.querySelector('.trip_weather').innerHTML = `<p class="mt-1">The current weather:</p>
                                                        <p class="mt-1">${weather.temperature}&deg;F</p>
                                                        <p class="mt-1">${weather.summary}</p>`;
-  } else {
-    document.querySelector('.trip_weather').innerHTML = `<p class="mt-1">Weather forecast for then:</p>
-                                                       <p class="mt-1">${weather.forecastTemp}&deg;F</p>
-                                                       <p class="mt-1">${weather.forecastSummary}</p>`;
-  }
   
 }
 

@@ -71,14 +71,18 @@
       <!-- <section class="trips"></section> -->
     </div>
   </main>
+
   <script>
-    // Check that service workers are supported
-    if ('serviceWorker' in navigator) {
-      // Use the window load event to keep the page load performant
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service-worker.js');
-      });
-    }
-  </script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js').then(trip =>{
+                        console.log('SW registered successfuly: ', trip);
+                    });
+                });
+                }else{
+                console.log("Service Working not supported");
+                    }
+        </script>
 </body>
 </html>

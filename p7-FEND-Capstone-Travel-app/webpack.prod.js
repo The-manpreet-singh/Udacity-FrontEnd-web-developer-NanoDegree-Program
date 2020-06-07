@@ -1,11 +1,17 @@
 const path = require('path');
 const webpack = require('webpack');
 const HTMLWebPackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
-  entry: './src/public/js/index.js',
+  entry: './src/public/index.js',
   mode: 'development',
+  optimization: {
+    minimizer: [new TerserPlugin({}), new OptimizeCSSAssetsPlugin({})],
+},
   module: {
     rules: [
       {
@@ -19,13 +25,7 @@ module.exports = {
       },
       {
         test: /\.(scss)$/,
-        use: [{
-          loader: 'style-loader', // inject CSS to page
-        }, {
-          loader: 'css-loader', // translates CSS into CommonJS modules
-        }, {
-          loader: 'sass-loader' // compiles Sass to CSS
-        }]
+        use: [ MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader' ]
       },
       {
         test: /\.(jpg|png|svg|jpg|gif)$/,
@@ -35,9 +35,13 @@ module.exports = {
   },
   plugins: [
     new HTMLWebPackPlugin({
-      template: './src/public/index.html',
+      template: './src/public/view/index.html',
       filename: 'index.html'
     }),
-    new WorkboxPlugin.GenerateSW()
+    new MiniCssExtractPlugin({filename: '[name].css'}),
+    new WorkboxPlugin.GenerateSW({
+        clientsClaim: true,
+        skipWaiting: true
+    }), 
   ]
 }

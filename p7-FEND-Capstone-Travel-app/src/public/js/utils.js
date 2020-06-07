@@ -15,13 +15,13 @@ const getTripStart = () => {
 
   const date = document.getElementById('date_start').value.split('-');
 
-  return date.join('/');
+  return date.join('-');
 }
 
 const getTripEnd = () => {
   const date = document.getElementById('date_end').value.split('-');
 
-  return date.join('/');
+  return date.join('-');
 }
 
 const countdown = (start, end) => {

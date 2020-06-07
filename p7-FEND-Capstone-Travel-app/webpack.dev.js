@@ -2,9 +2,10 @@ const path = require('path');
 const webpack = require('webpack');
 const HTMLWebPackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
-  entry: './src/public/js/index.js',
+  entry: './src/public/index.js',
   mode: 'development',
   module: {
     rules: [
@@ -28,7 +29,7 @@ module.exports = {
         }]
       },
       {
-        test: /\.(jpg|png|svg|jpg|gif)$/,
+        test: /\.(jpg|png|svg|jpg|gif|webp)$/,
         loader: 'file-loader'
       },
       // {
@@ -53,7 +54,7 @@ module.exports = {
   },
   plugins: [
     new HTMLWebPackPlugin({
-      template: './src/public/index.html',
+      template: './src/public/view/index.html',
       filename: 'index.html'
     }),
     new CleanWebpackPlugin({
@@ -64,6 +65,10 @@ module.exports = {
       // Automatically remove all unused webpack assets on rebuild
       cleanStaleWebpackAssets: true,
       protectWebpackAssets: false
-    })
+    }),
+    new WorkboxPlugin.GenerateSW({
+      clientsClaim: true,
+      skipWaiting: true
+  }),
   ]
 }
