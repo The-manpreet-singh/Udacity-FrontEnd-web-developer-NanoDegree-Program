@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Travel App</title>
+</head>
+
+<body>
+
+  <div class="container" id="app">
+
+    <div class="holder headline">
+      <h1>Travel App</h1>
+    </div>
+
+    <div class="holder zip">
+      
+      <label for="zip">Destination:</label>
+      <input type="text" id="input1" placeholder="Enter zip code here">
+    </div>
+    <div class="holder feel">
+      <p class = "text">Start Date: </p>
+      <input id="input2"
+             placeholder="dd/mm/yyyy"
+             type="date">
+
+      <p class = "text">End Date: </p>
+      <input id="input3"
+             placeholder="dd/mm/yyyy"
+             type="date">
+             <br>
+    </div>
+    <div class="holder generate-button">
+      <button class = "button" onClick = "Client.formHandler()" type="button" style=" outline: 0 none;">Submit</button> <br>
+      <button id = "removeTripButton" class = "button" type="button" style=" outline: 0 none;">Remove Trip</button>
+      <br><br>
+    </div>
+    <div class="holder entry">
+      <div class="title">Recent Entry</div>
+      <div id="entryHolder">
+        <p>Latitude<div id="latitude"></div></p>
+        <p>Longitude<div id="longitude"></div></p>
+        <p >Country Code:<div id="country"></div></p>
+        <p style = "display: none;"><div id="placeName"></div></p>
+        <p>Countdown:<div id="countdown"></div></p>
+        <p>Length of Trip:<div id="LoT" ></div></p>
+        <p>Prospective Weather:<br><ul id="weather" ></ul></p><br>
+        <p style = "display: none;">image<div id="image" class = "picz"></div></p>
+      </div>
+    </div>
+
+  </div>
+
+
+  <footer>
+    <!-- <div class = "links">
+      <a href="https://jkmagnussen.com/">
+        <img class="home" src="home.png" alt="home" />
+      </a>
+      <a href="https://github.com/jkmagnussen/FEND-Capstone-Project-Travel-App">
+        <img class="github" src="github.png" alt="github" />
+      </a>
+      <a href="https://linkedin.com/in/joseph-magnussen/">
+        <img class="linkedIn" src="linkedIn.png" alt="linkedIn" />            
+     </a>
+    </div> -->
+  </footer>
+  
+  <script>
+    window.addEventListener('load', () => {
+        document.getElementById('removeTripButton').addEventListener('click', () => Client.buttonHandler());
+    });
+    // Check that service workers are supported
+    if ('serviceWorker' in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js');
+        });
+    }
+</script>
+
+</body>
+
+</html>
