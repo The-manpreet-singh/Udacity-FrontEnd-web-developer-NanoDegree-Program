@@ -1,13 +1,12 @@
 
-const pixabayURL = 'https://pixabay.com/api/?key=';
+
 const pixabayKey = '13922659-0b80b0f115dd3a353e0647b73';
 
-export default async function getImageURL(city, country) {
+export async function getImageURL(city, country) {
     const queryCity = `&q=${city}&image_type=photo&pretty=true&category=places`;
-    const queryCountry = `&q=${country}&image_type=photo&pretty=true&category=places`
-    
-    const cityEndpoint = pixabayURL + pixabayKey + queryCity;
-    const countryEndpoint = pixabayURL + pixabayKey + queryCountry;
+    const queryCountry = `&q=${country}&image_type=photo&pretty=true&category=places`;
+    const cityEndpoint = 'https://pixabay.com/api/?key=' + pixabayKey + queryCity;
+    const countryEndpoint = 'https://pixabay.com/api/?key=' + pixabayKey + queryCountry;
     try {
       let response = await fetch(cityEndpoint);
       //console.log(response);
