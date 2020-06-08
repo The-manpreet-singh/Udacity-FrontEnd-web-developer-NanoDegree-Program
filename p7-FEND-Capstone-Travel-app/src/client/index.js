@@ -1,17 +1,45 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles/style.scss';
-import 'bootstrap';
-const $ = require("jquery");
-
 import  { getGeoCity, getImageURL, getWeatherForecast, getCountryInfo} from './js/app';
 
-import { getCity, getTripStart, getTripEnd } from './js/countDown';
+import { getCity, getTripStart, getTripEnd } from './js/form';
 
-import { showModal, displayTrip } from './js/model';
+import { showModal, recentTrip } from './js/model';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import './styles/style.scss';
+
+import 'bootstrap';
+
+const $ = require("jquery");
+
 
 const trip = {};
 
-/* Button handle functions */
+const handleSave = async (event) => {
+  event.preventDefault();
+
+  try {
+    const res = await fetch('http://localhost:8080/saveData',
+      {
+        method: 'POST',
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ trip: trip })
+      });
+    if (res.ok) {
+      const data = await res.json();
+      recentTrip(data);
+      return data;
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+const handleCancel = (event) => {
+  event.preventDefault();
+  $('#tripModal').modal('toggle');
+  document.querySelector('.caption').style.display = 'block';
+}
 
 const handleSearch = async (e) => {
   e.preventDefault();
@@ -39,35 +67,7 @@ const handleSearch = async (e) => {
 
   showModal(trip);
 }
-
-const handleSave = async (e) => {
-  e.preventDefault();
-
-  try {
-    const response = await fetch('http://localhost:8080/save',
-      {
-        method: 'POST',
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ trip: trip })
-      });
-    if (response.ok) {
-      const jsonRes = await response.json();
-      displayTrip(jsonRes);
-      return jsonRes;
-    }
-  } catch (error) {
-    console.log(error);
-  }
-}
-
-const handleCancel = (e) => {
-  e.preventDefault();
-  $('#tripModal').modal('toggle');
-  document.querySelector('.caption').style.display = 'block';
-}
-
 /* Add event listeners */
-
 document.getElementById('button_search').addEventListener('click', handleSearch);
 
 document.querySelector('.trip_save').addEventListener('click', handleSave)

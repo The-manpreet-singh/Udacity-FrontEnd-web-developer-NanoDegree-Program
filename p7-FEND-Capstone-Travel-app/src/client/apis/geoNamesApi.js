@@ -1,9 +1,6 @@
 
 
 const username = 'manpreetsingh';
-//const dotenv= require('dotenv').config()
-//console.log(`${process.env.API_ID}`)
-
 
 export async function getGeoCity(city) {
     const dataUrl = 'http://api.geonames.org/' + 'searchJSON?formatted=true&q=' + city + '&username=' + username + '&style=full'; 

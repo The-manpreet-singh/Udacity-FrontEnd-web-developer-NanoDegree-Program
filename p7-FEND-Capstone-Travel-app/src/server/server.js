@@ -24,20 +24,13 @@ app.listen(PORT, () => {
 /* Trips Array */
 
 const trips = [];
-
-
-
-
-
-  
-
 /* Routes */
 
 app.get('/', (req, res) => {
   res.status(200).send('./dist/index.html');
 });
 
-app.post('/save', (req, res, next) => {
+app.post('/saveData', (req, res, next) => {
   if (req.body !== " ") {
     const trip = req.body.trip;
     trips.push(trip);

@@ -1,34 +1,52 @@
-import { countdown } from './countDown';
+
+
 import 'bootstrap';
+
 const $ = require("jquery");
 
+import { countdown } from './form';
 
-const getTripDate = (date) => {
+const recentTrip = (trip) => {
+  document.querySelector('.caption').style.display = 'block';
+  document.querySelector('.caption').style.top = '5vh';
+  $('#tripModal').modal('toggle');
 
-  const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-  const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const tripStart = getTripDate(trip.start);
+  const tripEnd = getTripDate(trip.end);
+  const daysLeft = countdown(new Date(), trip.start);
+  const weather = getWeatherInfo(trip.weatherForecast, daysLeft, tripStart);
 
-  const tripDate = new Date(date);
-  const tripDateText = `${days[tripDate.getDay()]}, ${months[tripDate.getMonth()]} ${tripDate.getDate()}, ${tripDate.getFullYear()}`;
+  const div = document.createElement('div');
+   div.classList.add('col-md-4');
+   //section.appendChild(div);
+  document.querySelector('.trips-container').appendChild(div);
 
-  return tripDateText;
-}
+  div.innerHTML = `
+  <div class="col-md-12">
+  <div class="card mb-12">
 
-const getWeatherInfo = (weatherForecast,daysLeft, date) => {
-  
-  const weather = {
-    temperature: 0,
-    summary: ''
-  };
-  //  var startDate = new Date(date);
-  //  var todaydate = new Date();
-  
-  //  startDate = startDate.getDate();
-  //  todaydate = todaydate.getDate();
+    <div class="row no-gutters">
+      <div class="col-md-12">
+        <img src="${trip.image}" class="card-img" alt="Picture of Travel Destination">
+      </div>
 
-   weather.temperature = weatherForecast.data[daysLeft].temp;
-   weather.summary = weatherForecast.data[daysLeft].weather.description;
-  return weather;
+      <div class="col-md-12">
+        <div class="card-body">
+          <h4 class="card-title trip_title"><img src="${trip.countryFlag}" class="flag"> ${trip.city}, ${trip.country}</h4>
+          <h6 class="mt-0">Departure:<span style="color:crimson"> ${tripStart}</span></h6>
+          <h6 class="mt-0">Return:<span style="color:crimson">${tripEnd}</span> </h6>
+          <h6 class="mt-0">Duration:<span style="color:crimson"> ${countdown(trip.start, trip.end)}</span> days</h6>
+          <span class="trip_countdown">Your trip to <span style="color:crimson">${trip.city} </span> is <span style="color:crimson">${daysLeft}</span>  days away</span>
+          <p>Trip date weather: <span style="color:crimson">${weather.temperature}&deg;F</span>, <span style="color:crimson">${weather.summary}</span> </p>
+        </div>
+      </div>
+
+    </div>
+    <div class="clearfix"></div>
+  </div>
+ 
+  <div class="clearfix"></div>
+  </div>`;
 }
 
 
@@ -63,59 +81,51 @@ const showModal = (trip) => {
 
   // Display weather info
   const weather = getWeatherInfo(trip.weatherForecast,daysLeft, tripStart);
-    document.querySelector('.trip_weather').innerHTML = `<p class="mt-1">The current weather:</p>
-                                                       <p class="mt-1">${weather.temperature}&deg;F</p>
-                                                       <p class="mt-1">${weather.summary}</p>`;
+    document.querySelector('.trip_weather').innerHTML = `<p>Trip date weather: <span style="color:crimson">${weather.temperature}&deg;F</span>, <span style="color:crimson">${weather.summary}</span> </p>`;
   
 }
 
-const displayTrip = (trip) => {
-
-
-  document.querySelector('.caption').style.display = 'block';
-  document.querySelector('.caption').style.top = '5vh';
+const getWeatherInfo = (weatherForecast,daysLeft, date) => {
   
-  $('#tripModal').modal('toggle');
+  const weather = {
+    temperature: 0,
+    summary: ''
+  };
 
-  const tripStart = getTripDate(trip.start);
-  const tripEnd = getTripDate(trip.end);
-  const daysLeft = countdown(new Date(), trip.start);
-  const weather = getWeatherInfo(trip.weatherForecast, daysLeft, tripStart);
-
-  //const section = document.createElement('section');
-  //section.classList.add('trips');
-
-  const div = document.createElement('div');
-   div.classList.add('col-md-4');
-   //section.appendChild(div);
-  document.querySelector('.trips-container').appendChild(div);
-
-  div.innerHTML = `
-  <div class="col-md-12">
-  <div class="card mb-12">
-
-    <div class="row no-gutters">
-      <div class="col-md-12">
-        <img src="${trip.image}" class="card-img" alt="Picture of Travel Destination">
-      </div>
-
-      <div class="col-md-12">
-        <div class="card-body">
-          <h4 class="card-title trip_title"><img src="${trip.countryFlag}" class="flag"> ${trip.city}, ${trip.country}</h4>
-          <h6 class="mt-0">Departure:<span style="color:crimson"> ${tripStart}</span></h6>
-          <h6 class="mt-0">Return:<span style="color:crimson">${tripEnd}</span> </h6>
-          <h6 class="mt-0">Duration:<span style="color:crimson"> ${countdown(trip.start, trip.end)}</span> days</h6>
-          <span class="trip_countdown">Your trip to <span style="color:crimson">${trip.city} </span> is <span style="color:crimson">${daysLeft}</span>  days away</span>
-          <p>Trip date weather:<span style="color:crimson">${weather.temperature}&deg;F</span>, <span style="color:crimson">${weather.summary}</span> </p>
-        </div>
-      </div>
-
-    </div>
-    <div class="clearfix"></div>
-  </div>
- 
-  <div class="clearfix"></div>
-  </div>`;
+   weather.temperature = weatherForecast.data[daysLeft].temp;
+   weather.summary = weatherForecast.data[daysLeft].weather.description;
+  return weather;
 }
 
-export { showModal, displayTrip };
+const getTripDate = (date) => {
+  const months = ["January",
+                  "February",
+                  "March", 
+                  "April", 
+                  "May", 
+                  "June",
+                  "July", 
+                  "August", 
+                  "September",
+                  "October", 
+                  "November", 
+                  "December"];
+
+  const days = ["Sunday", 
+                "Monday", 
+                "Tuesday", 
+                "Wednesday", 
+                "Thursday", 
+                "Friday", 
+                "Saturday"];
+
+  const tripDate = new Date(date);
+
+  const tripDateText = `${days[tripDate.getDay()]}, ${months[tripDate.getMonth()]} ${tripDate.getDate()}, ${tripDate.getFullYear()}`;
+
+  return tripDateText;
+}
+
+
+
+export { showModal, recentTrip };

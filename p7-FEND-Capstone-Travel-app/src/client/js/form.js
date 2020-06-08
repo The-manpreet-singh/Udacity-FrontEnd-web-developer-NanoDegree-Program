@@ -1,4 +1,3 @@
-// Get user city and date input on  submit
 const getCity = () => {
   
   let city = document.getElementById('city').value;
