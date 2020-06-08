@@ -9,7 +9,7 @@
 <body>
   <header>
     <!-- Image and text -->
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar" style="background-color: currentcolor">
       <a class="navbar-brand" href="#">
         <img src="" width="30" height="30" class="d-inline-block align-top" alt="">
         Travel-app
@@ -24,8 +24,8 @@
           <div class="container search">
             <h1 class="text-center header">Travel-Planner</h1>
             <div class="row">
-             <input type="text" id="city" placeholder="City" aria-label="City" class="form-control col-md-12 mt-1">
-              <input type="date" id="date_start" aria-label="Date" class="form-control col-md-12 mt-1">
+             <input type="text" id="city" placeholder="City or Country name" aria-label="City" class="form-control col-md-12 mt-1">
+              <input type="date" id="date_start" placeholder="start date" class="form-control col-md-12 mt-1">
               <input type="date" id="date_end" aria-label="Date" class="form-control col-md-12 mt-1">
               <!-- <div class="input-group-append col-md-1"> -->
                 <button class="btn btn-secondary col-md-12 mt-1" type="button" id="button_search">Search</button>
@@ -69,7 +69,7 @@
         </div>
       </section>
       <section>
-         <div class="row trips-con">
+         <div class="row trips-container">
 
          </div>
 

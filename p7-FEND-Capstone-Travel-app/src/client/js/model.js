@@ -87,13 +87,14 @@ const displayTrip = (trip) => {
 
   const div = document.createElement('div');
    div.classList.add('col-md-4');
+   //section.appendChild(div);
+  document.querySelector('.trips-container').appendChild(div);
 
   div.innerHTML = `
-  
   <div class="col-md-12">
   <div class="card mb-12">
+
     <div class="row no-gutters">
-      
       <div class="col-md-12">
         <img src="${trip.image}" class="card-img" alt="Picture of Travel Destination">
       </div>
@@ -101,13 +102,11 @@ const displayTrip = (trip) => {
       <div class="col-md-12">
         <div class="card-body">
           <h4 class="card-title trip_title"><img src="${trip.countryFlag}" class="flag"> ${trip.city}, ${trip.country}</h4>
-          <h6 class="mt-0">Departure: ${tripStart}</h6>
-          <h6 class="mt-0">Return: ${tripEnd}</h6>
-          <h6 class="mt-0">Duration: ${countdown(trip.start, trip.end)} days</h6>
-          <span class="trip_countdown">Your trip to ${trip.city} is ${daysLeft} days away</span>
-          <p>The current weather:</p>
-          <p>${weather.temperature}&deg;F</p>
-          <p>${weather.summary}</p>
+          <h6 class="mt-0">Departure:<span style="color:crimson"> ${tripStart}</span></h6>
+          <h6 class="mt-0">Return:<span style="color:crimson">${tripEnd}</span> </h6>
+          <h6 class="mt-0">Duration:<span style="color:crimson"> ${countdown(trip.start, trip.end)}</span> days</h6>
+          <span class="trip_countdown">Your trip to <span style="color:crimson">${trip.city} </span> is <span style="color:crimson">${daysLeft}</span>  days away</span>
+          <p>Trip date weather:<span style="color:crimson">${weather.temperature}&deg;F</span>, <span style="color:crimson">${weather.summary}</span> </p>
         </div>
       </div>
 
@@ -117,9 +116,6 @@ const displayTrip = (trip) => {
  
   <div class="clearfix"></div>
   </div>`;
-
-  //section.appendChild(div);
-  document.querySelector('.trips-con').appendChild(div);
 }
 
 export { showModal, displayTrip };
