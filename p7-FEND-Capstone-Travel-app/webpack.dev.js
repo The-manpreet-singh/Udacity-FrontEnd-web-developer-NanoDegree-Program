@@ -5,7 +5,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
-  entry: './src/public/index.js',
+  entry: './src/client/index.js',
   mode: 'development',
   module: {
     rules: [
@@ -54,7 +54,7 @@ module.exports = {
   },
   plugins: [
     new HTMLWebPackPlugin({
-      template: './src/public/view/index.html',
+      template: './src/client/view/index.html',
       filename: 'index.html'
     }),
     new CleanWebpackPlugin({

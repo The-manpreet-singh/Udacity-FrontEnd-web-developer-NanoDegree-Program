@@ -1,6 +1,23 @@
 body {
   height: 100%;
 }
+
+.trips-con{
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  padding: .5rem;
+  background-color: cadetblue;
+}
+.trip_title {
+  color: deepskyblue;
+}
+
+.flag {
+  width: 100px;
+  height: auto;
+}
+
 .navbar-brand{
   color: #02b3e4 !important;
   font-size: 2rem;
@@ -13,7 +30,9 @@ body {
   font-weight: 600;
 }
 .main {
-  height: 100vh;
+  margin: auto;
+    width: 70%;
+    height: 65vh;
   background: url('../media/images/evening.jpg');
   background-position: center;
   background-repeat: no-repeat;
@@ -23,7 +42,7 @@ body {
   text-align: center;
 }
 .search {
-  width: 50%
+  width: 80%
 }
 .caption {
   background-color: transparent;
@@ -34,18 +53,7 @@ body {
     padding: 4rem 2rem;
   }
 
-.trips {
-  background-color: #fff;
-  width: 90%;
-  max-width: 868px;
-  margin: 0 auto;
-  padding: 2rem;
-}
 
-.flag {
-  width: 75px;
-  height: auto;
-}
 @media (max-width: 980px) {
   .header {
     font-size: 2rem;

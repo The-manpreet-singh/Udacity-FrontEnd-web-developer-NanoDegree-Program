@@ -82,20 +82,25 @@ const displayTrip = (trip) => {
   const daysLeft = countdown(new Date(), trip.start);
   const weather = getWeatherInfo(trip.weatherForecast, daysLeft, tripStart);
 
-  const section = document.createElement('section');
-  section.classList.add('trips');
+  //const section = document.createElement('section');
+  //section.classList.add('trips');
 
   const div = document.createElement('div');
-  
+   div.classList.add('col-md-4');
+
   div.innerHTML = `
-  <div class="card mb-3" style="max-width: 768px; margin: 0 auto">
+  
+  <div class="col-md-12">
+  <div class="card mb-12">
     <div class="row no-gutters">
-      <div class="col-md-4">
+      
+      <div class="col-md-12">
         <img src="${trip.image}" class="card-img" alt="Picture of Travel Destination">
       </div>
-      <div class="col-md-8">
+
+      <div class="col-md-12">
         <div class="card-body">
-          <h3 class="card-title trip_title"><img src="${trip.countryFlag}" class="flag"> ${trip.city}, ${trip.country}</h3>
+          <h4 class="card-title trip_title"><img src="${trip.countryFlag}" class="flag"> ${trip.city}, ${trip.country}</h4>
           <h6 class="mt-0">Departure: ${tripStart}</h6>
           <h6 class="mt-0">Return: ${tripEnd}</h6>
           <h6 class="mt-0">Duration: ${countdown(trip.start, trip.end)} days</h6>
@@ -105,11 +110,16 @@ const displayTrip = (trip) => {
           <p>${weather.summary}</p>
         </div>
       </div>
+
     </div>
+    <div class="clearfix"></div>
+  </div>
+ 
+  <div class="clearfix"></div>
   </div>`;
 
-  section.appendChild(div);
-  document.querySelector('.main').appendChild(section);
+  //section.appendChild(div);
+  document.querySelector('.trips-con').appendChild(div);
 }
 
 export { showModal, displayTrip };

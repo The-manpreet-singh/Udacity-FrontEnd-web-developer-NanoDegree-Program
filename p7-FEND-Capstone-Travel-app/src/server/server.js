@@ -25,6 +25,12 @@ app.listen(PORT, () => {
 
 const trips = [];
 
+
+
+
+
+  
+
 /* Routes */
 
 app.get('/', (req, res) => {
