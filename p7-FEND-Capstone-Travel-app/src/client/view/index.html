@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Travel-App</title>
+</head>
+
+<body>
+  <header>
+    <!-- Image and text -->
+    <nav class="navbar" style="background-color: currentcolor">
+      <a class="navbar-brand" href="#">
+        <img src="" width="30" height="30" class="d-inline-block align-top" alt="">
+        Travel-app
+      </a>
+    </nav>
+  </header>
+  <main>
+    <div class="container-fluid p-0">
+      <section class="main">
+
+        <div class="caption jumbotron jumbotron-fluid">
+          <div class="container search">
+            <h1 class="text-center header">Travel-Planner</h1>
+            <div class="row">
+             <input type="text" id="city" placeholder="City or Country name" aria-label="City" class="form-control col-md-12 mt-1">
+              <input type="date" id="date_start" placeholder="start date" class="form-control col-md-12 mt-1">
+              <input type="date" id="date_end" aria-label="Date" class="form-control col-md-12 mt-1">
+              <!-- <div class="input-group-append col-md-1"> -->
+                <button class="btn btn-secondary col-md-12 mt-1" type="button" id="button_search">Search</button>
+              <!-- </div> -->
+            </div>
+          </div>
+        </div>
+
+       
+        <div class="modal fade" id="tripModal" tabindex="-1" role="dialog" aria-labelledby="tripModalTitle"
+          aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title trip_title" id="tripModalTitle"></h3>
+                <button class="trip_cancel close" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="container-fluid">
+                  <div class="media row">
+                    <img src="" class="images mr-3 col-12 col-lg-5" alt="Popular Images from Trip Location">
+                    <div class="media-body col-12 col-lg-7">
+                      <h4 class="mt-0">Trip to: <span class="media_heading" style="color:crimson"></span></h4>
+                      <h6 class="mt-0">Departure: <span class="media_heading" style="color:crimson"></span></h6>
+                      <h6 class="mt-0">Return: <span class="media_heading" style="color:crimson"></span></h6>
+                      <h6 class="mt-0">Duration: <span class="media_heading" style="color:crimson"></span></h6>
+                      <span class="trip_countdown" ></span>
+                      <span class="trip_weather"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary trip_cancel">Close</button>
+                  <button type="button" class="btn btn-primary trip_save">Save</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </section>
+
+      <section>
+         <div class="row trips-container">
+
+         </div>
+
+      </section>
+    </div>
+  </main>
+
+  <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js').then(trip =>{
+                        console.log('SW registered successfuly: ', trip);
+                    });
+                });
+                }else{
+                console.log("Service Working not supported");
+                    }
+        </script>
+</body>
+</html>

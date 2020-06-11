@@ -1,0 +1,82 @@
+body {
+  height: 100%;
+}
+
+.trips-container{
+  width: 100%;
+  display: flex;
+  margin: 5px auto;
+  background-color: cadetblue;
+}
+.trips-container .col-md-4 {
+  padding: 20px 0px !important;
+  
+}
+.trip_title {
+  color: deepskyblue;
+}
+
+.flag {
+  width: 100px;
+  height: auto;
+}
+
+.navbar-brand{
+  color: #02b3e4 !important;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.header{
+  font-size: 4rem;
+  color: #fff;
+  font-weight: 600;
+}
+.main {
+  margin: 20px auto;
+  width: 70%;
+  height: 75vh;
+  border-radius: 100px;
+  background: url('../media/images/evening.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#button_search{
+  text-align: center;
+  background-color: cadetblue !important;
+}
+.search {
+  width: 65%;
+  background: rgba(59, 11, 40, 0.6);
+ border-radius: 25px;
+ height: 275px;
+}
+.caption {
+  background-color: transparent;
+  width: 100%;
+}
+
+.jumbotron {
+    padding: 4rem 2rem;
+  }
+
+
+@media (max-width: 980px) {
+  .header {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 600px) {
+  .search {
+    width: 100%;
+    height: 255px;
+  }
+}
+@media screen and (min-width: 576px) {
+  .jumbotron {
+    padding: 8rem 2rem;
+  }
+}
+
+
