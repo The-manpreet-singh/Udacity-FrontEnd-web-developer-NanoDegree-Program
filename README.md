@@ -1,5 +1,9 @@
 # Udacity Front-End Web Developer Nano-degree Program Project
 
+![Udacity Front End Nanodegree](https://github.com/The-manpreet-singh/Udacity-FrontEnd-web-developer-NanoDegree-Program/blob/master/Front-end%20Developer%20certificate.jpg "Manpreet Singh")
+
+![Udacity Front End Nanodegree](https://github.com/The-manpreet-singh/Udacity-FrontEnd-web-developer-NanoDegree-Program/blob/master/Udacity%20Graduate.png "Manpreet Singh")
+
 ##Projects:
 
 - P1 - Personal Web Blog
