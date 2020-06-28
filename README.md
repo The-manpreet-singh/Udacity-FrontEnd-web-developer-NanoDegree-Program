@@ -4,7 +4,7 @@
 
 ![Udacity Front End Nanodegree](https://github.com/The-manpreet-singh/Udacity-FrontEnd-web-developer-NanoDegree-Program/blob/master/Udacity%20Graduate.png "Manpreet Singh")
 
-##Projects:
+##Projects:-
 
 - P1 - Personal Web Blog
 - P2 - Landing Page
