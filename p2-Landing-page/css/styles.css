@@ -28,3 +28,192 @@ h2 {
 	font-size: 3em;
 	color: #fff;
 }
+
+p {
+	line-height: 1.6em;
+	color: #eee;
+}
+
+/* ---- Layout Rules ---- */
+main {
+	margin: 10vh 1em 10vh;
+}
+
+.main-hero {
+	min-height: 40vh;
+	padding-top: 3em;
+}
+
+section {
+	position: relative;
+	min-height: 80vh;
+}
+
+/* Navigation Styles*/
+.navbar_menu ul {
+	padding-left: 0;
+	margin: 0;
+	text-align: right;
+}
+
+.navbar_menu li {
+	display: inline-block;
+	padding-top: 15px;
+}
+
+.navbar_menu .menu_link {
+	display: block;
+	padding: 1em;
+	font-weight: bold;
+	text-decoration: none;
+	color: #000;
+}
+
+.navbar_menu .menu_link:hover {
+	background: #333;
+	color: #fff;
+	transition: ease 0.3s all;
+}
+
+#navbar_header {
+	display: flex;
+	justify-content: flex-end;
+	list-style: none;
+	height: 50px;
+	text-transform: uppercase;
+	font-size: 14px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 6000;
+	background: #fff;
+	box-shadow: 0 1px 20px 0 rgba(46, 61, 73, 0.2);
+	color: #525c65;
+	font-weight: 400;
+	letter-spacing: 0;
+}
+
+li a {
+	text-decoration: none;
+	padding: 20px;
+	cursor: pointer;
+}
+
+a,
+a:visited,
+a:active {
+	color: inherit;
+}
+
+/* Active Section */
+.active {
+	background-color: #02b3e4;
+	font-weight: bold;
+}
+
+/* Header Styles */
+.header_page {
+	background: #fff;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 5;
+}
+
+/* Footer Styles */
+.footer_page {
+	background: #000;
+	padding: 2em;
+	color: #fff;
+}
+
+.footer_page p {
+	color: #fff;
+}
+
+/* ---- Theme Rules ---- */
+/* Landing Container Styles */
+.section_container {
+	padding: 1em;
+	text-align: center;
+}
+
+@media only screen and (min-width: 35em) {
+	.section_container {
+		max-width: 50em;
+		padding: 4em;
+	}
+}
+
+section:nth-of-type(even) .section_container {
+	margin-right: 0;
+	margin-left: auto;
+}
+
+/* Background Circles */
+/* Note that background circles are created with psuedo elements before and after */
+/* Circles appear to be random do to use of :nth-of-type psuedo class */
+section:nth-of-type(odd) .section_container::before {
+	content: "";
+	background: rgba(255, 255, 255, 0.187);
+	position: absolute;
+	z-index: -5;
+	width: 20vh;
+	height: 20vh;
+	border-radius: 50%;
+	opacity: 0;
+	transition: ease 0.5s all;
+}
+
+section:nth-of-type(even) .section_container::before {
+	content: "";
+	background: rgb(255, 255, 255);
+	background: linear-gradient(0deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.2) 100%);
+	position: absolute;
+	top: 3em;
+	right: 3em;
+	z-index: -5;
+	width: 10vh;
+	height: 10vh;
+	border-radius: 50%;
+	opacity: 0;
+	transition: ease 0.5s all;
+}
+
+section:nth-of-type(3n) .section_container::after {
+	content: "";
+	background: rgb(255, 255, 255);
+	background: linear-gradient(0deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.2) 100%);
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	z-index: -5;
+	width: 10vh;
+	height: 10vh;
+	border-radius: 50%;
+	opacity: 0;
+	transition: ease 0.5s all;
+}
+
+section:nth-of-type(3n + 1) .section_container::after {
+	content: "";
+	background: rgb(255, 255, 255);
+	background: linear-gradient(0deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.2) 100%);
+	position: absolute;
+	right: 20vw;
+	bottom: -5em;
+	z-index: -5;
+	width: 15vh;
+	height: 15vh;
+	border-radius: 50%;
+	opacity: 0;
+	transition: ease 0.5s all;
+}
+
+/* ---- Theme State Rules ---- */
+/* Section Active Styles */
+/* Note: current-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
+section.current-active-class {
+	background: rgb(0, 0, 0);
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+}
