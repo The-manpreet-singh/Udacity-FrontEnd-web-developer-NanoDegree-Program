@@ -18,6 +18,7 @@ sectionNav.forEach((element, index) => {
 	liTag.innerHTML = `<a onClick="scrollToSection(${toOffSection})">${sectionName}</a>`;
 	NavTag.appendChild(liTag);
 });
+
 document.addEventListener("scroll", () => {
 	currentPosition = this.scrollY;
 	// Section Positions
