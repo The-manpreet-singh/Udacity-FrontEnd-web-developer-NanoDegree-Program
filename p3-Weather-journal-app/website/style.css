@@ -48,3 +48,17 @@ body {
 #entryHolder {
 	color: black;
 }
+#date {
+	color: firebrick;
+	font-weight: bold;
+}
+
+#temp {
+	color: firebrick;
+	font-weight: bolder;
+}
+
+#contentry {
+	color: firebrick;
+	font-weight: bolder;
+}
