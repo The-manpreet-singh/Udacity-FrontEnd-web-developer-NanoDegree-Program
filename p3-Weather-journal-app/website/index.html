@@ -11,6 +11,29 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		hello
+		<div class="container" id="app">
+			<div class="holder headline">
+				<h1>Weather Journal App</h1>
+			</div>
+			<div class="holder zip">
+				<label for="zip">Enter Zipcode here(Only for USA)</label>
+				<input type="text" id="zip" placeholder="Enter zip code here" />
+			</div>
+			<div class="holder feel">
+				<label for="feelings"> your's feeling today?</label>
+				<textarea class="myInput" id="feelings" placeholder="your feelings here" rows="6" cols="40"></textarea>
+			</div>
+			<div class="holder generate-button">
+				<button id="generate" type="submit">Add</button>
+			</div>
+			<div class="holder entry">
+				<div class="title">Recent Entry</div>
+				<div id="entryHolder">
+					<div id="date"></div>
+					<div id="temp"></div>
+					<div id="content"></div>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
