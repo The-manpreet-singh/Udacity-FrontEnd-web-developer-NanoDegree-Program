@@ -17,3 +17,34 @@ body {
 		"add"
 		"entry";
 }
+
+#app {
+	margin: 30px auto;
+	padding: 2rem 1.25rem;
+	position: relative;
+	background-color: #fff;
+	margin-bottom: 3rem;
+	z-index: 999;
+	box-shadow: 2px 5px 6px 6px rgba(0, 0, 0, 0.3), 9px 11px 11px 0 rgba(0, 0, 0, 0.4);
+	color: black;
+	grid-gap: 1em;
+	font-size: 20px;
+	font-family: "Hind Siliguri", sans-serif;
+	line-height: 2.5em;
+}
+
+.holder {
+	margin: 5px auto;
+}
+
+.entry {
+	width: 60%;
+	margin: 20px auto;
+	grid-area: entry;
+	padding: 9px 35px 92px 19px;
+	box-shadow: 2px 5px 6px 6px rgba(0, 0, 0, 0.3), 9px 11px 11px 0 rgba(0, 0, 0, 0.4);
+}
+
+#entryHolder {
+	color: black;
+}
