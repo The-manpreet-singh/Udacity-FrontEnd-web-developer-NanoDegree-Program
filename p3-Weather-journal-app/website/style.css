@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css?family=Hind+Siliguri|Josefin+Sans:700|Overpass&display=swap");
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: minmax(50px, auto);
+	grid-template-areas:
+		"hd"
+		"zip"
+		"feeling"
+		"add"
+		"entry";
+}
