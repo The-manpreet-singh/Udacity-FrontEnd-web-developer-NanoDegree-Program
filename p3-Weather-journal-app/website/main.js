@@ -70,3 +70,25 @@ const getDataApi = async (baseURL, zip, API_KEY) => {
 		}
 	}
 };
+
+// Async POST
+/* Function to POST data */
+// Async POST
+const postDataApi = async (url = "", data = {}) => {
+	console.log("post weather data: ", data);
+	const response = await fetch(url, {
+		method: "POST",
+		credentials: "same-origin",
+		headers: {
+			"Content-Type": "application/json",
+		},
+		body: JSON.stringify(data), // body data type must match "Content-Type" header
+	});
+
+	try {
+		const newData = await response.json();
+		console.log("post res: ", newData);
+	} catch (error) {
+		console.log("error", error);
+	}
+};
