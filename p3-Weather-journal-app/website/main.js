@@ -45,3 +45,28 @@ function displayAction() {
 		})
 		.then(() => updateUI());
 }
+
+// Async GET
+/* Function to GET Web API Data*/
+const getDataApi = async (baseURL, zip, API_KEY) => {
+	if (zip.toString().length !== 5) {
+		alert("zip should be of length 5!");
+	} else {
+		/* Please note as country is not specified so, the search works for USA as a default. */
+		const url = `${baseURL}${zip}${API_KEY}`;
+
+		const request = await fetch(url);
+		try {
+			// Transform into JSON
+			const allData = await request.json();
+			if (allData.message) {
+				alert(allData.message);
+			} else {
+				return allData;
+			}
+		} catch (error) {
+			console.log("error", error);
+			// appropriately handle the error
+		}
+	}
+};
