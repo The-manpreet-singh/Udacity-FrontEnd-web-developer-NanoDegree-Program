@@ -92,3 +92,17 @@ const postDataApi = async (url = "", data = {}) => {
 		console.log("error", error);
 	}
 };
+
+/* Function to update UI */
+const updateUI = async () => {
+	const request = await fetch("/all");
+	try {
+		const data = await request.json();
+		console.log("updateUI: ", data);
+		document.getElementById("date").innerHTML = `Date: ${data.date}`;
+		document.getElementById("temp").innerHTML = `Temperature(°C): ${data.temperature}`;
+		document.getElementById("content").innerHTML = `Feelings: ${data.userResponse}`;
+	} catch (error) {
+		console.log("error", error);
+	}
+};
