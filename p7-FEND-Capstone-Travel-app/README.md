@@ -1,20 +1,19 @@
-# Udacity Front End Development Nonodegree 
+# Udacity Front End Development Nonodegree
 
 # FEND-Capstone-Travel-App
 
-
+## Live Url- https://capstone-travel-by-manpreet.netlify.app/
 
 ## Rules: project rubic (https://review.udacity.com/#!/rubrics/2669/view)
 
 ## Table of Contents
 
 1. [About the Project](#about-the-project)
-2. [API(s) Used](#apis(s)-used)
+2. [API(s) Used](<#apis(s)-used>)
 3. [Development Strategy](#development-strategy)
-4. [Getting Started](#getting-started) 
+4. [Getting Started](#getting-started)
 5. [Built With](#built-with)
 6. [Test](#test)
-
 
 ## About the Project
 
@@ -22,9 +21,9 @@ In most cases of personal projects, it is very common to pull basic data from an
 
 ## API(s) Used
 
-* [Geonames API](http://www.geonames.org/export/web-services.html) - Geographical database from which the location data is pulled
-* [WeatherBit API](https://www.weatherbit.io/) - Weather API for current and future weather data
-* [Pixabay API](https://pixabay.com/api/docs/) - RESTful interface for searching and retrieving free images and videos
+- [Geonames API](http://www.geonames.org/export/web-services.html) - Geographical database from which the location data is pulled
+- [WeatherBit API](https://www.weatherbit.io/) - Weather API for current and future weather data
+- [Pixabay API](https://pixabay.com/api/docs/) - RESTful interface for searching and retrieving free images and videos
 
 ## Development strategy
 
@@ -39,44 +38,56 @@ In most cases of personal projects, it is very common to pull basic data from an
 ## Getting Started
 
 1. Download or clone the project:
+
 ```
 git clonehttps://github.com/The-manpreet-singh/Udacity-FrontEnd-web-developer-NanoDegree-Program.git [folder_name]
 ```
+
 2. Install dependencies
+
 ```
 npm install --save-dev
 ```
+
 3. Start the server
+
 ```
 npm start
 ```
+
 4. Setup the environment development or production
+
 ```
 npm run build-dev
 ```
-or 
+
+or
+
 ```
 npm run build-prod
 ```
+
 5. Test with Jest
+
 ```
 npm run test
 ```
 
 ## Built With
 
-* [Bootstrap](https://getbootstrap.com/) - The CSS framework used 
-* [Sass](https://sass-lang.com/documentation) - The web framework used
-* [Webpack](https://webpack.js.org/concepts/) - Asset Management
-* [Babel](https://babeljs.io/) - JavaScript Compiler
-* [Node.js](https://nodejs.org/en/) - JavaScript Runtime
-* [Express.js](https://expressjs.com/) - Server Framework for Node.js
-* [Jest](https://jestjs.io/) - Testing suit
-* [Service Workers](https://developers.google.com/web/fundamentals/primers/service-workers) - For offline capability
+- [Bootstrap](https://getbootstrap.com/) - The CSS framework used
+- [Sass](https://sass-lang.com/documentation) - The web framework used
+- [Webpack](https://webpack.js.org/concepts/) - Asset Management
+- [Babel](https://babeljs.io/) - JavaScript Compiler
+- [Node.js](https://nodejs.org/en/) - JavaScript Runtime
+- [Express.js](https://expressjs.com/) - Server Framework for Node.js
+- [Jest](https://jestjs.io/) - Testing suit
+- [Service Workers](https://developers.google.com/web/fundamentals/primers/service-workers) - For offline capability
 
 ## Test
 
 To test the application, run
+
 ```
 npm run test
 ```
