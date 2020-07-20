@@ -2,6 +2,10 @@
 
 # FEND-Capstone-Travel-App
 
+
+
+## Rules: project rubic (https://review.udacity.com/#!/rubrics/2669/view)
+
 ## Table of Contents
 
 1. [About the Project](#about-the-project)
