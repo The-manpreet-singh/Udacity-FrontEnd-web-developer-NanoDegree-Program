@@ -1,37 +1,40 @@
 const getCity = () => {
-	let city = document.getElementById("city").value;
+  
+  let city = document.getElementById('city').value;
 
-	city = city.toLowerCase();
-	city = city[0].toUpperCase() + city.slice(1);
+  city = city.toLowerCase();
+  city = city[0].toUpperCase() + city.slice(1);
 
-	console.log(city);
+  console.log(city);
 
-	return city;
-};
+  return city;
+}
 
 const getTripStart = () => {
-	const date = document.getElementById("date_start").value.split("-");
 
-	return date.join("-");
-};
+  const date = document.getElementById('date_start').value.split('-');
+
+  return date.join('-');
+}
 
 const getTripEnd = () => {
-	const date = document.getElementById("date_end").value.split("-");
+  const date = document.getElementById('date_end').value.split('-');
 
-	return date.join("-");
-};
+  return date.join('-');
+}
 
 const countdown = (start, end) => {
-	const tripStart = Date.parse(start);
-	const tripEnd = Date.parse(end);
 
-	const countdown = tripEnd - tripStart;
+  const tripStart = Date.parse(start);
+  const tripEnd = Date.parse(end);
 
-	const daysLeft = Math.ceil(countdown / 86400000);
+  const countdown = tripEnd - tripStart;
 
-	//console.log(daysLeft);
+  const daysLeft = Math.ceil(countdown / 86400000);
 
-	return daysLeft;
-};
+  //console.log(daysLeft);
 
-export { getCity, getTripStart, getTripEnd, countdown };
+  return daysLeft;
+}
+
+export { getCity, getTripStart, getTripEnd, countdown};
