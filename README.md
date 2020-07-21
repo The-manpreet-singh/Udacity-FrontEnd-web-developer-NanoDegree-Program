@@ -27,4 +27,7 @@ All Udacity FrontEnd Web Developer projects which are created by me with clean c
 - P6 - Improve your github profile
 - P7 - FEND-Capstone-Travel-App
 
+##Live URL'S:-
+ 
+- P1 - https://the-manpreet-singh.github.io/Personal-Blog-Website/
 
