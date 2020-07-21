@@ -13,6 +13,7 @@ All Udacity FrontEnd Web Developer projects which are created by me with clean c
 - JavaScript & The DOM- Syntax, The Document Object Model, Creating Content with JavaScript, Working with Browser Events, Performance.
 - Web API's & Asynchronous Applications- Node & Express Environment, HTTP Requests & Routes, Asynchronous JavaScript.
 - Build Tools, Webpack & Service Worker- Intro to Build Tools, Basics of Webpack, Sass and Webpack, Final Touches.
+- EXTRA'S- Intro to Computer Science, Responsive Web Design Fundamentals, Responsive Images, JavaScript Basics, Intro to JQuery, Object-Oriented JavaScript, HTML5 Canvas, Website Performance Optimization, Browser Rendering Optimization, Intro to AJAX, JavaScript Design Patterns, JavaScript Testing.
 - career services
 - Capstone (4 APIS used)
 
