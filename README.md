@@ -33,3 +33,6 @@ All Udacity FrontEnd Web Developer projects which are created by me with clean c
 
 - P1 - https://the-manpreet-singh.github.io/Personal-Blog-Website/
 - P2 - https://the-manpreet-singh.github.io/Landing-page/
+- P3 - 
+- P4 - 
+- P5 - https://www.linkedin.com/in/manpreet-singh-027199181/
