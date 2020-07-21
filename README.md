@@ -9,10 +9,10 @@ All Udacity FrontEnd Web Developer projects which are created by me with clean c
 ##Courses
 
 - HTML5
-- CSS, Website Layout, Website
-- JavaScript & The Dom
-- Web API'S & Asynchronous Applications
-- Build Tools and Single Page Web Apps
+- CSS & Website Layout- Introduction to HTML, Introduction to CSS, Introducing Flexbox, CSS Grid, Creating Responsive Layouts.
+- JavaScript & The DOM- Syntax, The Document Object Model, Creating Content with JavaScript, Working with Browser Events, Performance.
+- Web API's & Asynchronous Applications- Node & Express Environment, HTTP Requests & Routes, Asynchronous JavaScript.
+- Build Tools, Webpack & Service Worker- Intro to Build Tools, Basics of Webpack, Sass and Webpack, Final Touches.
 - career services
 - Capstone (4 APIS used)
 
