@@ -34,7 +34,7 @@ All Udacity FrontEnd Web Developer projects which are created by me with clean c
 - P1 - https://the-manpreet-singh.github.io/Personal-Blog-Website/
 - P2 - https://the-manpreet-singh.github.io/Landing-page/
 - P3 - yarn install & yarn start
-- P4 -
+- P4 - yarn install & yarn start
 - P5 - https://www.linkedin.com/in/manpreet-singh-027199181/
 - P6 - https://github.com/The-manpreet-singh/
 - P7 - https://capstone-travel-by-manpreet.netlify.app/
